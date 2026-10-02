@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonimizza documento - Kit Classe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">🎒 <span>Kit</span> Classe</a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="anonimizza.html" class="active">Anonimizza</a>
+      <a href="consegna-anonima.html">Consegna anonima</a>
+      <a href="suggerimenti.html">Suggerimenti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <p><span class="badge">Solo docente - uso privato</span></p>
+    <h1>Anonimizza un documento</h1>
+    <p>Carica un file <code>.txt</code>, <code>.md</code> o <code>.pdf</code>, oppure incolla il testo. I nomi vengono trovati <strong>in automatico</strong>: premi un pulsante e scarica la copia anonima. Nessun dato lascia il tuo computer.</p>
+  </section>
+
+  <section class="panel">
+    <label for="file-input">1. Carica file .txt, .md o .pdf (facoltativo)</label>
+    <input type="file" id="file-input" accept=".txt,.md,.pdf,application/pdf">
+    <p id="stato-file" style="color:#5b6474;font-size:.9rem;"></p>
+    <iframe id="anteprima-pdf" title="Anteprima PDF" style="display:none;width:100%;height:400px;border:1px solid #e2e8f0;border-radius:10px;margin-top:.6rem;"></iframe>
+    <label for="testo">2. Testo da anonimizzare</label>
+    <textarea id="testo" placeholder="Incolla qui il testo del documento..."></textarea>
+
+    <label for="nomi">3. Nomi e cognomi (rilevati in automatico, puoi correggere)</label>
+    <input type="text" id="nomi" placeholder="Premi il pulsante qui sotto per trovarli da solo">
+    <div class="row">
+      <button class="btn secondary small" id="btn-trova-nomi" type="button">Trova nomi in automatico</button>
+      <button class="btn small" id="btn-auto-anonimizza" type="button">Rileva e anonimizza tutto</button>
+    </div>
+    <p id="nomi-auto" style="color:#5b6474;font-size:.9rem;"></p>
+    <label><input type="checkbox" id="opt-email" checked> Nascondi anche email automatiche</label>
+    <label><input type="checkbox" id="opt-telefoni" checked> Nascondi anche numeri di telefono automatici</label>
+
+    <div class="row">
+      <button class="btn" id="btn-anonimizza">Anonimizza</button>
+      <button class="btn secondary" id="btn-scarica">Scarica .txt anonimo</button>
+      <button class="btn secondary" id="btn-copia">Copia</button>
+      <button class="btn secondary" id="btn-pulisci">Pulisci</button>
+    </div>
+
+    <label>Risultato anonimo</label>
+    <div class="output" id="risultato">Qui vedrai il testo anonimizzato...</div>
+    <p id="contatore" style="color:#5b6474;font-size:.9rem;"></p>
+  </section>
+
+  <section class="panel">
+    <h2>Come funziona</h2>
+    <ul class="list">
+      <li>Rilevamento automatico: cerca <code>Nome Cognome</code> nel testo usando una lista di nomi italiani + controllo maiuscole. Riempie il campo da solo, senza conferma uno per uno.</li>
+      <li>Ogni nome trovato viene sostituito con <code>███</code>, compresi i nomi singoli ripetuti da soli (es. solo “Mario”).</li>
+      <li>Se attivi le opzioni, email e numeri di telefono vengono sostituiti con <code>[email rimossa]</code> e <code>[telefono rimosso]</code>.</li>
+      <li>I file <code>.pdf</code> vengono letti nel browser e il testo viene messo nel riquadro sopra (serve internet la prima volta per la libreria PDF). La scansione/foto di un PDF non si legge: in quel caso copia il testo a mano.</li>
+      <li>Il file scaricato si chiama <code>documento-anonimo.txt</code>.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>Kit Classe · tutto nel browser, nessun invio online</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="js/anonimizza.js"></script>
+</body>
+</html>

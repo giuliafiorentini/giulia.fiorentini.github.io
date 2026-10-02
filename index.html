@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit Classe - home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">🎒 <span>Kit</span> Classe</a>
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="anonimizza.html">Anonimizza</a>
+      <a href="consegna-anonima.html">Consegna anonima</a>
+      <a href="suggerimenti.html">Suggerimenti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>Kit Classe</h1>
+    <p>Un unico punto di accesso per la classe: registro, Classroom, consegne anonime e suggerimenti per migliorare la didattica.</p>
+  </section>
+
+  <section class="panel">
+    <h2>1. Link del docente</h2>
+    <p>Modifica i due pulsanti qui sotto con i tuoi link veri. Apri <code>index.html</code> e sostituisci gli <code>href="#"</code>.</p>
+    <div class="row">
+      <!-- MODIFICA QUI: incolla il link del registro al posto di # -->
+      <a class="btn" href="#" id="link-registro">Apri Registro Elettronico</a>
+      <!-- MODIFICA QUI: incolla il link di Google Classroom al posto di # -->
+      <a class="btn secondary" href="#" id="link-classroom">Apri Google Classroom</a>
+    </div>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <span class="badge">Solo docente - uso privato</span>
+      <h3>Anonimizza un documento</h3>
+      <p>Incolla un testo o carica un file .txt, scrivi i nomi da nascondere e scarica la versione anonima. Tutto avviene nel browser, nessun invio online.</p>
+      <a class="btn small" href="anonimizza.html">Vai allo strumento</a>
+    </div>
+    <div class="card">
+      <span class="badge green">Per studenti - anonimo</span>
+      <h3>Consegna lavoro anonimo</h3>
+      <p>Gli studenti generano un codice anonimo (es. STUD-4F8K) e scaricano il file anonimo da inviare tramite il modulo del docente.</p>
+      <a class="btn small secondary" href="consegna-anonima.html">Vai alla consegna</a>
+    </div>
+    <div class="card">
+      <span class="badge green">Per studenti - anonimo</span>
+      <h3>Suggerimento anonimo</h3>
+      <p>Proposta anonima per migliorare spiegazioni, verifiche e metodologia. Senza nome, senza email.</p>
+      <a class="btn small secondary" href="suggerimenti.html">Lascia un suggerimento</a>
+    </div>
+  </div>
+
+  <section class="panel">
+    <h2>Come ricevere davvero i file degli studenti?</h2>
+    <p>Questo sito è fatto solo di file statici: <strong>non ha un server</strong> che salva i compiti. Quindi:</p>
+    <ul class="list">
+      <li>Le pagine <strong>Consegna</strong> e <strong>Suggerimenti</strong> funzionano in modo anonimo sul PC dello studente (generano codice anonimo + file da scaricare).</li>
+      <li>Per raccogliere tutto tu, crea un <strong>Modulo Google</strong> anonimo (senza raccolta email) e incolla il link nelle due pagine.</li>
+      <li>Istruzioni pronte nelle pagine: sezione gialla “Come consegnare”.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>Kit Classe · sito statico per GitHub Pages · apri i file o pubblica senza modifiche</footer>
+</body>
+</html>

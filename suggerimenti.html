@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggerimento anonimo - Kit Classe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">🎒 <span>Kit</span> Classe</a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="anonimizza.html">Anonimizza</a>
+      <a href="consegna-anonima.html">Consegna anonima</a>
+      <a href="suggerimenti.html" class="active">Suggerimenti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <p><span class="badge green">Anonimo - non inserire nome o email</span></p>
+    <h1>Suggerimento per migliorare la didattica</h1>
+    <p>Scrivi un consiglio anonimo per il professore: spiegazioni, verifiche, compiti, metodo. Nessun dato personale richiesto.</p>
+  </section>
+
+  <div class="notice">
+    <strong>Vuoi che il suggerimento arrivi davvero al professore?</strong>
+    Usa il modulo anonimo del docente (consigliato) oppure usa il pulsante qui sotto che salva solo su questo dispositivo come prova.
+    <!-- MODIFICA QUI: incolla il link al Modulo Google per i suggerimenti -->
+    <br><a href="#" id="link-modulo-suggerimenti"><strong>→ Apri il modulo anonimo del docente</strong></a>
+  </div>
+
+  <section class="panel">
+    <label for="categoria">Categoria</label>
+    <select id="categoria">
+      <option>Spiegazioni in classe</option>
+      <option>Verifiche e interrogazioni</option>
+      <option>Compiti a casa</option>
+      <option>Metodo e organizzazione</option>
+      <option>Altro</option>
+    </select>
+    <label for="suggerimento">Il tuo suggerimento anonimo</label>
+    <textarea id="suggerimento" placeholder="Es. Puoi ripetere gli esempi più lentamente? Vorrei più esercizi svolti insieme..."></textarea>
+    <div class="row">
+      <button class="btn" id="btn-salva">Salva in forma anonima (su questo PC)</button>
+      <button class="btn secondary" id="btn-copia-sugg">Copia testo</button>
+    </div>
+    <p style="color:#5b6474;font-size:.9rem;">La lista qui sotto è visibile solo su questo computer (memoria locale). Per una raccolta di classe usa il Modulo Google.</p>
+    <label>Suggerimenti salvati su questo dispositivo</label>
+    <div class="output" id="lista">Nessun suggerimento salvato.</div>
+    <div class="row">
+      <button class="btn secondary small" id="btn-cancella">Cancella lista locale</button>
+    </div>
+  </section>
+</main>
+
+<footer>Kit Classe · nessun nome richiesto</footer>
+<script src="js/suggerimenti.js"></script>
+</body>
+</html>

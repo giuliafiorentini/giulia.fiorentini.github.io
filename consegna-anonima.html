@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consegna anonima - Kit Classe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">🎒 <span>Kit</span> Classe</a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="anonimizza.html">Anonimizza</a>
+      <a href="consegna-anonima.html" class="active">Consegna anonima</a>
+      <a href="suggerimenti.html">Suggerimenti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <p><span class="badge green">Per studenti - anonimo, non inserire il nome</span></p>
+    <h1>Consegna il tuo lavoro in forma anonima</h1>
+    <p>Scrivi o carica il tuo testo, genera un codice anonimo e scarica il file da inviare al docente. Non scrivere nome, cognome o email.</p>
+  </section>
+
+  <div class="notice">
+    <strong>Come consegnare davvero al professore:</strong>
+    questo sito da solo non invia file al professore (è senza server).
+    1) Genera il file anonimo qui sotto, 2) scaricalo, 3) caricalo nel modulo del docente:
+    <!-- MODIFICA QUI: incolla il link al Modulo Google per le consegne -->
+    <br><a href="#" id="link-modulo-compiti"><strong>→ Apri il modulo del docente per inviare il file</strong></a>
+  </div>
+
+  <section class="panel">
+    <label for="titolo">Titolo del lavoro (facoltativo, senza nome)</label>
+    <input type="text" id="titolo" placeholder="Es. Tema sul bullismo, Esercizio 5 pag. 42">
+    <label for="file-lavoro">Carica file .txt (facoltativo)</label>
+    <input type="file" id="file-lavoro" accept=".txt,.md">
+    <label for="testo-lavoro">Testo del lavoro</label>
+    <textarea id="testo-lavoro" placeholder="Incolla o scrivi qui il tuo lavoro, senza firma..."></textarea>
+
+    <div class="row">
+      <button class="btn" id="btn-generacodice">Genera codice anonimo</button>
+      <button class="btn secondary" id="btn-scarica-lavoro">Scarica file anonimo</button>
+      <button class="btn secondary" id="btn-copia-lavoro">Copia testo</button>
+    </div>
+
+    <p>Codice anonimo: <code id="codice">premi Genera</code></p>
+    <label>Anteprima anonima</label>
+    <div class="output" id="anteprima">Qui vedrai l'anteprima con il tuo codice...</div>
+  </section>
+</main>
+
+<footer>Kit Classe · consegna anonima dimostrativa locale</footer>
+<script src="js/consegna.js"></script>
+</body>
+</html>
